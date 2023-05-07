@@ -1,7 +1,7 @@
 import { of, catchError } from 'rxjs';
 import { ajax, AjaxError } from 'rxjs/ajax';
 
-const url = 'https://httpbin.org/delay/1';
+const url = 'https://httpbinxx.org/delay/1';
 const manejaError = ( resp: AjaxError ) => {
     console.warn( 'error', resp.message );
     return of({
@@ -21,7 +21,7 @@ const obs2$ = ajax( url );
 
 // obs2$.subscribe( data => console.log( 'ajax', data ) );
 
-obs2$.pipe(
+obs$.pipe(
     catchError( manejaError )
 ).subscribe({
     next: val => console.log( 'next:', val ),
