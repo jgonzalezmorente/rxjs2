@@ -56,5 +56,3 @@ import { zip, of } from 'rxjs';
     ).subscribe( console.log )           // ==
     // =======================================
 })();
-
-		
